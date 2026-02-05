@@ -69,13 +69,14 @@ You should be in the branch and try change it by
 
 You should be in the other branch for safe.  
 
-*`git branch -d <branch name>`* -> It will Delete the branch locally.  
+*`git branch -d <branch name>`* -> It will delete the branch locally.  
 
 **Push new branch**  
 
 1. If branch is already available on the remote repo, they changes will be uploaded. [You should create a branch in the remote repo server before] 
 
-`git push origin <branch name>`
+`git push origin <branch name>`  
+
 	1. We can simplify the command by setting up upstream for this branch at first push and this upstream is alive until branch deleted.  
 	
 		`git push --set-upstream origin <branch name>'  
@@ -105,19 +106,27 @@ You should be in the other branch for safe.
 	#### Before merge	
 	In the master branch A->B  
 	
-		1. Create new branch and checkout.
-		2. HEAD is pointed to local feature branch B pointer.
-		3. main is pointed to local feature branch B pointer as main.
+		1. Create new branch and checkout.  
+		
+		2. HEAD is pointed to local feature branch B pointer.  
+		
+		3. main is pointed to local feature branch B pointer as main.  
+		
 		4. origin\main is pointed to remote main/master branch i.e pointer B.  
 		
 	#### After merge
 	In the master branch A->B  
 	
-		1. HEAD is pointed to main branch of master branch where we checked out.
-		2. A->B->D->C->M(Which is merge commit pointer. It links the both branches and will have 2 parent pointers).
-		3. Now HEAD is pointed to Merge pointer.
-		4. main is pointed to Merge pointer.
-		5. origin\main is pointed to remote main/master branch i.e pointer B.
+		1. HEAD is pointed to main branch of master branch where we checked out.  
+		
+		2. A->B->D->C->M(Which is merge commit pointer. It links the both branches and will have 2 parent pointers).  
+		
+		3. Now HEAD is pointed to Merge pointer.  
+		
+		4. main is pointed to Merge pointer.  
+		
+		5. origin\main is pointed to remote main/master branch i.e pointer B.  
+		
 		6. `git push origin master` -> to update on the remote server.  
 		
 ## Rebase
@@ -132,21 +141,30 @@ You should be in the other branch for safe.
 	#### Before rebase	
 	In the master branch A->B  
 	
-		1. Create new branch and checkout
-		2. HEAD is pointed to local feature branch B pointer
-		3. main is pointed to local feature branch B pointer as main 
-		4. origin\main is pointed to remote main/master branch i.e pointer B  
+		1. Create new branch and checkout.  
+		
+		2. HEAD is pointed to local feature branch B pointer.  
+		
+		3. main is pointed to local feature branch B pointer as main.  
+		
+		4. origin\main is pointed to remote main/master branch i.e pointer B.   
 		
 	#### After rebase	
 	In the master branch A->B  
 	
-		1. HEAD is pointed to local branch
-		2. main is pointed to local branch
-		3. origin\main is pointed to remote main/master branch i.e pointer B
-		4. A->B->D->C'(Which is a new commit where the new changes from local branch is recommitted again. It will remove the old commits on the local branch).
-		5. Now main is pointed to D pointer
-		6. main is pointed to D pointer
-		7. `git push origin <branch name> --force-with-lease` -> Force push to update on the branch PR, otherwise normal push will not work as previous PR will have different history and now it will have different history. So force push is needed here.  
+		1. HEAD is pointed to local branch.  
+		
+		2. main is pointed to local branch.  
+		
+		3. origin\main is pointed to remote main/master branch i.e pointer B.  
+		
+		4. A->B->D->C'(Which is a new commit where the new changes from local branch is recommitted again. It will remove the old commits on the local branch).  
+		
+		5. Now main is pointed to D pointer.  
+		
+		6. main is pointed to D pointer.  
+		
+		7. `git push origin <branch name> --force-with-lease` -> Force push to update on the branch PR, otherwise normal push will not work as previous PR will have different history and now it will have different history. So force push is needed here.    
 		
 ## Conflict resolve  
 
