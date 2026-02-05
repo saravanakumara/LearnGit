@@ -75,11 +75,11 @@ You should be in the other branch for safe.
 
 1. If branch is already available on the remote repo, they changes will be uploaded. [You should create a branch in the remote repo server before] 
 
-`git push origin <branch name>`  
-
+`git push origin <branch name>`
 	1. We can simplify the command by setting up upstream for this branch at first push and this upstream is alive until branch deleted.  
 	
-		`git push --set-upstream origin <branch name>'
+		`git push --set-upstream origin <branch name>'  
+		
 	2. Next time onwards the push command will be,  
 	
 		`git push` [no need to mention remote name and branch name]  
@@ -100,7 +100,8 @@ You should be in the other branch for safe.
 
 `git checkout master`  
 
-`git merge <feature/bugfix branch name>`
+`git merge <feature/bugfix branch name>`  
+
 	#### Before merge	
 	In the master branch A->B  
 	
@@ -126,7 +127,8 @@ You should be in the other branch for safe.
 
 `git checkout feature`  
 
-`git rebase main`
+`git rebase main`  
+
 	#### Before rebase	
 	In the master branch A->B  
 	
