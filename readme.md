@@ -31,9 +31,9 @@ With normal GIT command line tool:
 	`git push origin main`. If branch name is different, `git push origin <local branch name>:<remote branch name> for example, git push origin apple:banana`
 	
 	#### Note
-	**origin** *is a alias name for your repo url. When we create a repo or clone a repo, Git will automatically creates this alias and we don't need to type the enitre URL every time while pushing the changes to the Remote repo. It is basically like a bookmark.*  
+	1. **origin** *is a alias name for your repo url. When we create a repo or clone a repo, Git will automatically creates this alias and we don't need to type the enitre URL every time while pushing the changes to the Remote repo. It is basically like a bookmark.*  
 	
-	**main** *is a remote branch name that created by default when create a repo.*
+	2. **main** *is a remote branch name that created by default when create a repo.*
 
 ### Check configured URL's
 `git remote -v` -> List the configured alias names for the remote repo URL's
