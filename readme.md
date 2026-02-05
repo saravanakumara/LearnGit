@@ -21,7 +21,8 @@ With normal GIT command line tool:
 7. Now these changes are ready to push to remote server (repo)
 8. Create a link to the remote Repo from your local repo by,  
 
-	`git remote add origin "https://github.com/<project/user name>/<repo name.git>"`
+	`git remote add origin "https://github.com/<project/user name>/<repo name.git>"`  
+	
 	*"git remote" is used to edit a configuration file on your own computer i.e it will update the .git/.config file on the local system*
 9. Once alias/link is created with remote repo, we can push the changes to the remote repo by,  
 
@@ -29,11 +30,12 @@ With normal GIT command line tool:
 	
 	`git push origin main`. If branch name is different, `git push origin <local branch name>:<remote branch name> for example, git push origin apple:banana`
 	
-	**origin - is a alias name for your repo url. When we create a repo or clone a repo, Git will automatically creates this alias and we don't need to type the enitre URL every time while pushing the changes to the Remote repo. It is basically like a bookmark.**  
+	#####Note
+	**origin** *is a alias name for your repo url. When we create a repo or clone a repo, Git will automatically creates this alias and we don't need to type the enitre URL every time while pushing the changes to the Remote repo. It is basically like a bookmark.*  
 	
-	**main - is a remote branch name that created by default when create a repo.**
+	**main** *is a remote branch name that created by default when create a repo.*
 
-**Check configured URL's**
+####Check configured URL's
 `git remote -v` -> List the configured alias names for the remote repo URL's
 
 ## Branch
