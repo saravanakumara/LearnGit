@@ -100,10 +100,8 @@ You should be in the other branch for safe.
 
 `git checkout master`  
 
-`git merge <feature/bugfix branch name>`  
-
-	#### Before merge  
-	
+`git merge <feature/bugfix branch name>`
+	#### Before merge	
 	In the master branch A->B  
 	
 		1. Create new branch and checkout.
@@ -111,8 +109,7 @@ You should be in the other branch for safe.
 		3. main is pointed to local feature branch B pointer as main.
 		4. origin\main is pointed to remote main/master branch i.e pointer B.  
 		
-	#### After merge  
-	
+	#### After merge
 	In the master branch A->B  
 	
 		1. HEAD is pointed to main branch of master branch where we checked out.
@@ -129,10 +126,8 @@ You should be in the other branch for safe.
 
 `git checkout feature`  
 
-`git rebase main`  
-
-	#### Before rebase  
-	
+`git rebase main`
+	#### Before rebase	
 	In the master branch A->B  
 	
 		1. Create new branch and checkout
@@ -140,8 +135,7 @@ You should be in the other branch for safe.
 		3. main is pointed to local feature branch B pointer as main 
 		4. origin\main is pointed to remote main/master branch i.e pointer B  
 		
-	#### After rebase  
-	
+	#### After rebase	
 	In the master branch A->B  
 	
 		1. HEAD is pointed to local branch
